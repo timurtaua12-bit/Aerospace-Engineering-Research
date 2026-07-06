@@ -129,18 +129,19 @@ html {
 }
 
 #timeline button {
-  background: #00C2FF;
-  color: #061826;
+  background: linear-gradient(135deg, #00C2FF, #0088CC);
+  color: white;
   border: none;
-  padding: 14px 24px;
   border-radius: 30px;
+  padding: 14px 30px;
+  font-size: 17px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,194,255,.4);
 }
 
-#timelineFact {
-  color: #D9E6F2;
-  font-size: 18px;
-  margin-top: 18px;
+#timeline button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0,194,255,.8);
 }
