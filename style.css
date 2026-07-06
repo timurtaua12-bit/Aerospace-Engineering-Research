@@ -7,14 +7,16 @@ body {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(to right, #061826, #0B1F3A);
-  padding: 20px;
+  padding: 25px;
+  background:
+    radical-gradient(circle at top right, #00c2ff55, transparent 30%),
+    linear-gradient(135deg, #061826, #0b1f3a);
 }
 
 nav {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 22px;
 }
 
 nav h2 {
@@ -25,40 +27,81 @@ nav h2 {
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .hero-text {
-  max-width: 700px;
-  margin-top: 160px;
+  max-width: 850px;
+  margin-top: 150px;
+}
+
+.tagline {
+  color: #00C2FF;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero-text h1 {
-  font-size: 55px;
-  color: #ffffff;
+  font-size: 58px;
+  line-height: 1.1;
 }
 
 .hero-text p {
   font-size: 20px;
-  color: #D9E6f2;
+  color: #D9E6F2;
 }
 
-button {
+.button {
+  display: inline-block;
   background: #00C2FF;
   color: #061826;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 25px;
+  padding: 14px 26px;
+  border-radius: 30px;
+  text-decoration: none;  
   font-weight: bold;
 }
 
 section {
-  padding: 60px 12%;
+  padding: 70px 12%;
+}
+
+section h2 {
+  color: #00C2FF;
+  font-size: 34px;
 }
 
 .card {
-  background: #0B1F3A;
+  background: #0b1f3a;
   border: 1px solid #00C2FF;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
+  padding: 22px;
+  margin: 18px 0;
+  border-radius: 16px;
+  box-shadow: 0 0 18px #00c2ff33;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #03101c;
+  color: #D9E6F2;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
