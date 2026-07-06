@@ -9,6 +9,9 @@ body {
   min-height: 100vh;
   padding: 25px;
   background:
+    radical-gradient(circle at 20% 30%, white 1px, transparent 2px),
+    radical-gradient(circle at 80% 20%, white 1px, transparent 2px),
+    radical-gradient(circle at 60% 70%, #00C2FF 1px, transparent 2px),
     radical-gradient(circle at top right, #00c2ff55, transparent 30%),
     linear-gradient(135deg, #061826, #0b1f3a);
 }
@@ -124,3 +127,4 @@ html {
 .button {
   transition: 0.3s;
 }
+
