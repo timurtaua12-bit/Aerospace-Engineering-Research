@@ -1,4 +1,4 @@
-alert("JavaScript loaded!");
+
 function showTimelineFact() {
   const facts = [
     "The Wright Flyer flew for only 12 seconds in 1903.",
