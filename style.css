@@ -145,3 +145,17 @@ html {
   transform: translateY(-3px);
   box-shadow: 0 0 30px rgba(0,194,255,.8);
 }
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  color: #00C2FF;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #D9E6F2;
+}
