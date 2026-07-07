@@ -186,3 +186,12 @@ html {
   }
 }
 
+.link-card {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.link-card p {
+  color: #D9E6F2;
+}
