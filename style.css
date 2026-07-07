@@ -195,3 +195,21 @@ html {
 .link-card p {
   color: #D9E6F2;
 }
+
+.image-card {
+  background: #0b1f3a;
+  border: 1px solid #00C2FF;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 18px #00c2ff33;
+}
+
+.placeholder {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.image-card p {
+  color: #D9E6F2;
+}
