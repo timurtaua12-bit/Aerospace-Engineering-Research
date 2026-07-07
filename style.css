@@ -17,20 +17,33 @@ body {
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   gap: 22px;
+  padding: 18px 30px;
+  background: rgba(6, 24, 38, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #00c2ff55;
 }
 
 nav h2 {
   margin-right: auto;
   color: #00C2FF;
+  letter-spacing: 1px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00C2FF;
 }
 
 .hero-text {
@@ -159,3 +172,17 @@ html {
 .stat p {
   color: #D9E6F2;
 }
+
+@media (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav h2 {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
