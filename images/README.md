@@ -1,1 +1,4 @@
-This folder stores website images
+aircraft.jpg
+rocket.jpg
+satellite.jpg
+moon.jpg
