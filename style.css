@@ -245,3 +245,42 @@ html {
     transform: translateY(0);
   }
 }
+
+.stats {
+    padding: 80px 10%;
+}
+
+.stats h2 {
+    color: #00BFFF;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+}
+
+.stat-card {
+    background: #102742;
+    border: 2px solid #00BFFF;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00BFFF;
+}
+
+.stat-card h3 {
+    font-size: 42px;
+    color: #00BFFF;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: white;
+}
