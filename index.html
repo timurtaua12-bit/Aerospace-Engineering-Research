@@ -158,13 +158,19 @@
 
 <section id="timeline">
   <h2>Aerospace Timeline</h2>
-  <div class="card">1903 - Wright Flyer completes the first powered flight.</div>
-  <div class="card">1947 - Bell X-1 breaks the sound barrier.</div>
-  <div class="card">1969 - Apollo 11 lands humans on the Moon.</div>
-  <div class="card">1981 - Space Shuttle begins reusable spacecraft missions.</div>
-  <div class="card">Today - AI, drones, and reusable rockets change aerospace engineering.</div>
-  <button onclick="showTimelineFact()">Show Research fact</button>
-  <p id="timelineFact"></p>
+
+  <div class="timeline-buttons">
+    <button onclick="showEvent('wright')">1903</button>
+    <button onclick="showEvent('bell')">1947</button>
+    <button onclick="showEvent('apollo')">1969</button>
+    <button onclick="showEvent('shuttle')">1981</button>
+    <button onclick="showEvent('future')">Today</button>
+  </div>
+
+  <div class="card" id="timelineInfo">
+    <h3>1903 — Wright Flyer</h3>
+    <p>The Wright Flyer completed the first powered flight.</p>
+  </div>
 </section>
     
 
@@ -193,7 +199,6 @@
   </div>
 </section>
    
-
    
 <section id="future">
   <h2>Future Technology</h2>
