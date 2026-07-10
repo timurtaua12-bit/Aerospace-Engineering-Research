@@ -38,3 +38,27 @@ function showEvent(event) {
   document.getElementById("timelineInfo").innerHTML =
     `<h3>${info[event].title}</h3><p>${info[event].text}</p>`;
 }
+
+function searchTopics() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+
+  const topics = [
+    "Wright Flyer",
+    "Bell X-1",
+    "Apollo 11",
+    "Space Shuttle",
+    "Falcon 9",
+    "Saturn V",
+    "Aerodynamics",
+    "Propulsion",
+    "Satellites",
+    "AI Flight Systems"
+  ];
+
+  const results = topics.filter(topic =>
+    topic.toLowerCase().includes(input)
+  );
+
+  document.getElementById("searchResults").innerHTML =
+    results.map(result => `<p>${result}</p>`).join("");
+}
