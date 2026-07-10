@@ -342,3 +342,21 @@ section {
   padding: 12px;
   max-width: 600px;
 }
+
+.search-result {
+  display: block;
+  max-width: 600px;
+  margin-top: 10px;
+  padding: 14px;
+  background: #0b1f3a;
+  border-left: 4px solid #00C2FF;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.search-result:hover {
+  background: #11284a;
+  transform: translateX(5px);
+}
