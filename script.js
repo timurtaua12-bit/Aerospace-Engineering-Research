@@ -40,25 +40,46 @@ function showEvent(event) {
 }
 
 function searchTopics() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
+  const input = document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
 
   const topics = [
-    "Wright Flyer",
-    "Bell X-1",
-    "Apollo 11",
-    "Space Shuttle",
-    "Falcon 9",
-    "Saturn V",
-    "Aerodynamics",
-    "Propulsion",
-    "Satellites",
-    "AI Flight Systems"
+    { name: "Wright Flyer", page: "history.html" },
+    { name: "Bell X-1", page: "aircraft.html" },
+    { name: "Apollo 11", page: "history.html" },
+    { name: "Space Shuttle", page: "spacecraft.html" },
+    { name: "Falcon 9", page: "spacecraft.html" },
+    { name: "Saturn V", page: "spacecraft.html" },
+    { name: "Aerodynamics", page: "engineering.html" },
+    { name: "Propulsion", page: "engineering.html" },
+    { name: "Satellites", page: "spacecraft.html" },
+    { name: "AI Flight Systems", page: "research.html" }
   ];
 
+  const searchResults = document.getElementById("searchResults");
+
+  if (input === "") {
+    searchResults.innerHTML = "";
+    return;
+  }
+
   const results = topics.filter(topic =>
-    topic.toLowerCase().includes(input)
+    topic.name.toLowerCase().includes(input)
   );
 
-  document.getElementById("searchResults").innerHTML =
-    results.map(result => `<p>${result}</p>`).join("");
+  if (results.length === 0) {
+    searchResults.innerHTML = "<p>No topics found.</p>";
+    return;
+  }
+
+  searchResults.innerHTML = results
+    .map(topic => `
+      <a class="search-result" href="${topic.page}">
+        ${topic.name}
+      </a>
+    `)
+    .join("");
 }
