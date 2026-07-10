@@ -324,3 +324,21 @@ section {
   font-weight: bold;
   cursor: pointer;
 }
+
+#searchInput {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  border-radius: 30px;
+  border: 2px solid #00C2FF;
+  background: #0b1f3a;
+  color: white;
+  font-size: 16px;
+}
+
+#searchResults p {
+  background: #0b1f3a;
+  border-left: 4px solid #00C2FF;
+  padding: 12px;
+  max-width: 600px;
+}
