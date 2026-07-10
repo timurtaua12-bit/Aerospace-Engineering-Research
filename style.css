@@ -257,32 +257,33 @@ html {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
+    margin-top: 30px;
 }
 
 .stat-card {
-    background: #102742;
-    border: 2px solid #00BFFF;
+    background: #11284a;
+    border: 2px solid #00bfff;
     border-radius: 15px;
-    padding: 30px;
     text-align: center;
+    padding: 30pxr;
     transition: 0.3s;
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 20px #00BFFF;
+    box-shadow: 0 0 20px #00bfff;
 }
 
 .stat-card h3 {
     font-size: 42px;
-    color: #00BFFF;
+    color: #00bfff;
     margin-bottom: 10px;
 }
 
 .stat-card p {
-    color: white;
+    font-size: 18px;
 }
 
 .hero-text {
