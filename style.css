@@ -307,3 +307,20 @@ section {
   border-left: 6px solid #00C2FF;
   background: linear-gradient(135deg, #0b1f3a, #11284a);
 }
+
+.timeline-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.timeline-buttons button {
+  background: #00C2FF;
+  color: #061826;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
