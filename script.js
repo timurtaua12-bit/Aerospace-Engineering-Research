@@ -11,3 +11,30 @@ function showTimelineFact() {
   document.getElementById("timelineFact").textContent = randomFact;
 }
 
+function showEvent(event) {
+  const info = {
+    wright: {
+      title: "1903 — Wright Flyer",
+      text: "The Wright Flyer completed the first powered flight and opened the age of aviation."
+    },
+    bell: {
+      title: "1947 — Bell X-1",
+      text: "The Bell X-1 became the first aircraft to break the sound barrier."
+    },
+    apollo: {
+      title: "1969 — Apollo 11",
+      text: "Apollo 11 landed the first humans on the Moon."
+    },
+    shuttle: {
+      title: "1981 — Space Shuttle",
+      text: "The Space Shuttle introduced reusable spacecraft missions."
+    },
+    future: {
+      title: "Today — Future Aerospace",
+      text: "AI, reusable rockets, drones, and electric aircraft are shaping aerospace engineering today."
+    }
+  };
+
+  document.getElementById("timelineInfo").innerHTML =
+    `<h3>${info[event].title}</h3><p>${info[event].text}</p>`;
+}
