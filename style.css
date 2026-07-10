@@ -302,3 +302,8 @@ section {
     margin-right: 25px;
   }
 }
+
+#innovation .card {
+  border-left: 6px solid #00C2FF;
+  background: linear-gradient(135deg, #0b1f3a, #11284a);
+}
