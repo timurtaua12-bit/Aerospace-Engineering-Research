@@ -84,15 +84,52 @@ function searchTopics() {
     .join("");
 }
 
+const galleryImages = Array.from(
+  document.querySelectorAll(".gallery-card img")
+);
+
+let currentImageIndex = 0;
+
 function openImage(image) {
-  const modal = document.getElementById("imageModal");
+  currentImageIndex = galleryImages.indexOf(image);
+  updateModalImage();
+
+  document.getElementById("imageModal").style.display = "flex";
+}
+
+function updateModalImage() {
+  const selectedImage = galleryImages[currentImageIndex];
   const modalImage = document.getElementById("modalImage");
 
-  modal.style.display = "flex";
-  modalImage.src = image.src;
-  modalImage.alt = image.alt;
+  modalImage.src = selectedImage.src;
+  modalImage.alt = selectedImage.alt;
 }
 
-function closeImage() {
-  document.getElementById("imageModal").style.display = "none";
+function previousImage(event) {
+  event.stopPropagation();
+
+  currentImageIndex =
+    (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+
+  updateModalImage();
 }
+
+function nextImage(event) {
+  event.stopPropagation();
+
+  currentImageIndex =
+    (currentImageIndex + 1) % galleryImages.length;
+
+  updateModalImage();
+}
+
+function closeImage(event) {
+  if (
+    event.target.id === "imageModal" ||
+    event.target.classList.contains("close-modal")
+  ) {
+    document.getElementById("imageModal").style.display = "none";
+  }
+}
+
+
