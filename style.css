@@ -415,21 +415,26 @@ section {
 }
 
 .image-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
 }
 
 .image-modal img {
-  max-width: 90%;
+  max-width: 90vw;
   max-height: 85vh;
+  object-fit: contain;
   border-radius: 12px;
-  border: 1px solid #00c2ff;
 }
 
 .close-modal {
@@ -437,6 +442,6 @@ section {
   top: 20px;
   right: 35px;
   color: white;
-  font-size: 44px;
+  font-size: 50px;
   cursor: pointer;
 }
