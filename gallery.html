@@ -77,9 +77,18 @@
   <p>© 2026 AeroResearch</p>
 </footer>
 
-<div id="imageModal" class="image-modal" onclick="closeImage()">
-  <span class="close-modal">&times;</span>
+<div id="imageModal" class="image-modal" onclick="closeImage(event)">
+  <span class="close-modal" onclick="closeImage(event)">&times;</span>
+
+  <button class="modal-arrow left-arrow" onclick="previousImage(event)">
+    &#10094;
+  </button>
+
   <img id="modalImage" src="" alt="Expanded aerospace image">
+
+  <button class="modal-arrow right-arrow" onclick="nextImage(event)">
+    &#10095;
+  </button>
 </div>
 
 <script src="script.js"></script>
