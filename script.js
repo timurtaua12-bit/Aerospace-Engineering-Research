@@ -83,3 +83,16 @@ function searchTopics() {
     `)
     .join("");
 }
+
+function openImage(image) {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+
+  modal.style.display = "flex";
+  modalImage.src = image.src;
+  modalImage.alt = image.alt;
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
