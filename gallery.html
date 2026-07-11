@@ -32,25 +32,41 @@
   <h2>Aerospace Gallery</h2>
   <div class="gallery-grid">
     <div class="gallery-card">
-      <img src="images/aircraft.jpg" alt="Aerospace aircraft">
+      <img
+        src="images/aircraft.jpg"
+        alt="Aerospace aircraft"
+        onclick="openImage(this)"
+      >
       <h3>Aircraft</h3>
       <p>Historic and modern aircraft engineering.</p>
     </div>
   
     <div class="gallery-card">
-      <img src="images/rocket.jpg" alt="Rocket launch">
+      <img
+        src="images/rocket.jpg"
+        alt="Rocket"
+        onclick="openImage(this)"
+      >
       <h3>🚀 Rockets</h3>
       <p>Launch vehicles and propulsion systems.</p>
     </div>
 
     <div class="gallery-card">
-      <img src="images/satellite.jpg" alt="Satellite orbiting Earth">
+      <img
+        src="images/satellite.jpg"
+        alt="Satellite"
+        onclick="openImage(this)"
+      >
       <h3>🛰️ Satellites</h3>
       <p>Space technology used for communication, GPS, and science.</p>
     </div>
 
     <div class="gallery-card">
-      <img src="images/moon.jpg" alt="Moon exploration">
+      <img
+        src="images/moon.jpg"
+        alt="Moon"
+        onclick="openImage(this)"
+      >
       <h3>🌕 Moon Exploration</h3>
       <p>Spacecraft and technology used for lunar missions.</p>
     </div>
@@ -60,6 +76,11 @@
 <footer>
   <p>© 2026 AeroResearch</p>
 </footer>
+
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <span class="close-modal">&times;</span>
+  <img id="modalImage" src="" alt="Expanded aerospace image">
+</div>
 
 <script src="script.js"></script>
 </body>
