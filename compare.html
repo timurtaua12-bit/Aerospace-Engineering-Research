@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aircraft Comparison | AeroResearch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <h2>AeroResearch</h2>
+  <a href="index.html">Home</a>
+  <a href="history.html">History</a>
+  <a href="aircraft.html">Aircraft</a>
+  <a href="spacecraft.html">Spacecraft</a>
+  <a href="engineering.html">Engineering</a>
+  <a href="research.html">Research</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="compare.html">Compare</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="tagline">Aircraft Comparison Tool</p>
+    <h1>Compare Two Aircraft</h1>
+    <p>Compare speed, range, wingspan, engines, and first flight.</p>
+  </div>
+</header>
+
+<section>
+  <div class="comparison-selectors">
+    <select id="aircraftOne" onchange="compareAircraft()">
+      <option value="boeing747">Boeing 747</option>
+      <option value="airbusA380">Airbus A380</option>
+      <option value="sr71">SR-71 Blackbird</option>
+      <option value="concorde">Concorde</option>
+    </select>
+
+    <select id="aircraftTwo" onchange="compareAircraft()">
+      <option value="airbusA380">Airbus A380</option>
+      <option value="boeing747">Boeing 747</option>
+      <option value="sr71">SR-71 Blackbird</option>
+      <option value="concorde">Concorde</option>
+    </select>
+  </div>
+
+  <div class="comparison-grid">
+    <div class="comparison-card" id="aircraftOneData"></div>
+    <div class="comparison-card" id="aircraftTwoData"></div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
