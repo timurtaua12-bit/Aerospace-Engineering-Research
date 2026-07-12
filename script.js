@@ -132,47 +132,48 @@ function closeImage(event) {
   }
 }
 
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", function () {
+  const statisticsSection = document.getElementById("statistics");
+  const counters = document.querySelectorAll(".counter");
+  let animationStarted = false;
 
-const counterObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+  function startCounters() {
+    if (animationStarted) {
+      return;
+    }
 
-      const counter = entry.target;
-      const target = Number(counter.dataset.target);
+    animationStarted = true;
+
+    counters.forEach(function (counter) {
+      const target = Number(counter.getAttribute("data-target"));
       let current = 0;
-      const duration = 1500;
-      const startTime = performance.now();
+      const increment = Math.max(1, Math.ceil(target / 50));
 
-      function updateCounter(currentTime) {
-        const progress = Math.min(
-          (currentTime - startTime) / duration,
-          1
-        );
+      const timer = setInterval(function () {
+        current += increment;
 
-        const value = Math.floor(progress * target);
-        counter.textContent = value + "+";
-
-        if (progress < 1) {
-          requestAnimationFrame(updateCounter);
-        } else {
+        if (current >= target) {
           counter.textContent = target + "+";
+          clearInterval(timer);
+        } else {
+          counter.textContent = current + "+";
         }
-      }
-
-      requestAnimationFrame(updateCounter);
-      counterObserver.unobserve(counter);
+      }, 30);
     });
-  },
-  {
-    threshold: 0.4
   }
-);
 
-counters.forEach(counter => {
-  counterObserver.observe(counter);
+  const observer = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting) {
+        startCounters();
+        observer.disconnect();
+      }
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  observer.observe(statisticsSection);
 });
 
