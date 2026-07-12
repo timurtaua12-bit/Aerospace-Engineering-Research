@@ -134,22 +134,45 @@ function closeImage(event) {
 
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
-  const target = Number(counter.dataset.target);
-  let current = 0;
-  const increment = Math.max(1, Math.ceil(target / 60));
+const counterObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      }
 
-  function updateCounter() {
-    current += increment;
+      const counter = entry.target;
+      const target = Number(counter.dataset.target);
+      let current = 0;
+      const duration = 1500;
+      const startTime = performance.now();
 
-    if (current < target) {
-      counter.textContent = current + "+";
+      function updateCounter(currentTime) {
+        const progress = Math.min(
+          (currentTime - startTime) / duration,
+          1
+        );
+
+        const value = Math.floor(progress * target);
+        counter.textContent = value + "+";
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target + "+";
+        }
+      }
+
       requestAnimationFrame(updateCounter);
-    } else {
-      counter.textContent = target + "+";
-    }
+      counterObserver.unobserve(counter);
+    });
+  },
+  {
+    threshold: 0.4
   }
+);
 
-  updateCounter();
+counters.forEach(counter => {
+  counterObserver.observe(counter);
 });
 
