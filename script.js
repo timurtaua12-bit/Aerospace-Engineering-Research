@@ -235,3 +235,22 @@ function displayAircraft(elementId, aircraft) {
 }
 
 document.addEventListener("DOMContentLoaded", compareAircraft);
+
+function calculateFlight() {
+
+    const distance = Number(document.getElementById("distance").value);
+    const speed = Number(document.getElementById("speed").value);
+
+    if (distance <= 0 || speed <= 0) {
+
+        document.getElementById("result").textContent =
+            "Please enter valid numbers.";
+
+        return;
+    }
+
+    const hours = distance / speed;
+
+    document.getElementById("result").textContent =
+        "Estimated Flight Time: " + hours.toFixed(2) + " hours";
+}
