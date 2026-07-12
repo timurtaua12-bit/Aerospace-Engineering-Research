@@ -564,3 +564,14 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+#tools .link-card {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+#tools .link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 194, 255, 0.6);
+}
