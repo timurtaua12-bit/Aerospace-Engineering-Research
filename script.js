@@ -177,3 +177,61 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(statisticsSection);
 });
 
+const aircraftData = {
+  boeing747: {
+    name: "Boeing 747",
+    speed: "Mach 0.85",
+    range: "8,000 nautical miles",
+    wingspan: "224 ft",
+    engines: "4",
+    firstFlight: "1969"
+  },
+
+  airbusA380: {
+    name: "Airbus A380",
+    speed: "Mach 0.85",
+    range: "8,000 nautical miles",
+    wingspan: "261 ft",
+    engines: "4",
+    firstFlight: "2005"
+  },
+
+  sr71: {
+    name: "SR-71 Blackbird",
+    speed: "Mach 3.3",
+    range: "2,900 nautical miles",
+    wingspan: "56 ft",
+    engines: "2",
+    firstFlight: "1964"
+  },
+
+  concorde: {
+    name: "Concorde",
+    speed: "Mach 2.04",
+    range: "3,900 nautical miles",
+    wingspan: "84 ft",
+    engines: "4",
+    firstFlight: "1969"
+  }
+};
+
+function compareAircraft() {
+  const firstChoice = document.getElementById("aircraftOne").value;
+  const secondChoice = document.getElementById("aircraftTwo").value;
+
+  displayAircraft("aircraftOneData", aircraftData[firstChoice]);
+  displayAircraft("aircraftTwoData", aircraftData[secondChoice]);
+}
+
+function displayAircraft(elementId, aircraft) {
+  document.getElementById(elementId).innerHTML = `
+    <h2>${aircraft.name}</h2>
+    <p><strong>Maximum Speed:</strong> ${aircraft.speed}</p>
+    <p><strong>Range:</strong> ${aircraft.range}</p>
+    <p><strong>Wingspan:</strong> ${aircraft.wingspan}</p>
+    <p><strong>Engines:</strong> ${aircraft.engines}</p>
+    <p><strong>First Flight:</strong> ${aircraft.firstFlight}</p>
+  `;
+}
+
+document.addEventListener("DOMContentLoaded", compareAircraft);
