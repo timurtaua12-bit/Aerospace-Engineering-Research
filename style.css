@@ -703,3 +703,44 @@ section {
     gap: 8px;
   }
 }
+
+.aircraft-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.aircraft-profile img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #00c2ff;
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.spec-card {
+  background: #0b1f3a;
+  border: 1px solid #00c2ff;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+}
+
+.spec-card h3 {
+  color: #00c2ff;
+}
+
+@media (max-width: 800px) {
+  .aircraft-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+}
