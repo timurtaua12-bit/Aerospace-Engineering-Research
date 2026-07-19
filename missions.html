@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Explorer | AeroResearch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <h2>AeroResearch</h2>
+  <a href="index.html">Home</a>
+  <a href="history.html">History</a>
+  <a href="aircraft.html">Aircraft</a>
+  <a href="spacecraft.html">Spacecraft</a>
+  <a href="missions.html">Missions</a>
+  <a href="engineering.html">Engineering</a>
+  <a href="research.html">Research</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="compare.html">Compare</a>
+  <a href="calculator.html">Calculator</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="tagline">Space Mission Explorer</p>
+    <h1>Explore Important Space Missions</h1>
+    <p>
+      Discover the goals, engineering systems, and scientific impact of major
+      missions beyond Earth.
+    </p>
+  </div>
+</header>
+
+<section>
+  <h2>Featured Missions</h2>
+
+  <div class="mission-grid">
+
+    <article class="mission-card">
+      <div class="mission-icon">🌕</div>
+      <h3>Apollo 11</h3>
+      <p><strong>Launch:</strong> 1969</p>
+      <p>
+        The first mission to land humans on the Moon and return them safely to Earth.
+      </p>
+      <button onclick="showMission('apollo11')">Mission Details</button>
+    </article>
+
+    <article class="mission-card">
+      <div class="mission-icon">🛰️</div>
+      <h3>Voyager 1</h3>
+      <p><strong>Launch:</strong> 1977</p>
+      <p>
+        A robotic spacecraft that studied the outer planets and later entered
+        interstellar space.
+      </p>
+      <button onclick="showMission('voyager1')">Mission Details</button>
+    </article>
+
+    <article class="mission-card">
+      <div class="mission-icon">🔭</div>
+      <h3>Hubble Space Telescope</h3>
+      <p><strong>Launch:</strong> 1990</p>
+      <p>
+        A space telescope that transformed astronomy through detailed observations
+        of the universe.
+      </p>
+      <button onclick="showMission('hubble')">Mission Details</button>
+    </article>
+
+    <article class="mission-card">
+      <div class="mission-icon">🚀</div>
+      <h3>Artemis I</h3>
+      <p><strong>Launch:</strong> 2022</p>
+      <p>
+        An uncrewed test mission of the Space Launch System and Orion spacecraft.
+      </p>
+      <button onclick="showMission('artemis1')">Mission Details</button>
+    </article>
+
+    <article class="mission-card">
+      <div class="mission-icon">🔬</div>
+      <h3>James Webb Space Telescope</h3>
+      <p><strong>Launch:</strong> 2021</p>
+      <p>
+        An infrared observatory designed to study early galaxies, stars, and planets.
+      </p>
+      <button onclick="showMission('jwst')">Mission Details</button>
+    </article>
+
+    <article class="mission-card">
+      <div class="mission-icon">🔴</div>
+      <h3>Perseverance Rover</h3>
+      <p><strong>Landing:</strong> 2021</p>
+      <p>
+        A Mars rover studying ancient environments and collecting samples for
+        possible future return.
+      </p>
+      <button onclick="showMission('perseverance')">Mission Details</button>
+    </article>
+
+  </div>
+</section>
+
+<section id="mission-details">
+  <h2>Mission Details</h2>
+
+  <div class="card" id="missionInfo">
+    <h3>Select a mission</h3>
+    <p>Tap a Mission Details button to learn more.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2026 AeroResearch</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
