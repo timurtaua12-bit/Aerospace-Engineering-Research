@@ -294,3 +294,74 @@ function changeSlide(direction) {
 
   slides[currentSlide].classList.add("active");
 }
+
+const missionData = {
+  apollo11: {
+    title: "Apollo 11",
+    objective: "Land humans on the Moon and return them safely to Earth.",
+    engineering:
+      "The mission used the Saturn V rocket, command module, service module, and lunar module.",
+    impact:
+      "Apollo 11 demonstrated advanced navigation, propulsion, computing, and life-support engineering."
+  },
+
+  voyager1: {
+    title: "Voyager 1",
+    objective: "Study Jupiter, Saturn, and the outer solar system.",
+    engineering:
+      "Voyager 1 uses radioisotope power, long-distance communication, and autonomous spacecraft systems.",
+    impact:
+      "It became the first human-made spacecraft to enter interstellar space."
+  },
+
+  hubble: {
+    title: "Hubble Space Telescope",
+    objective: "Observe stars, galaxies, planets, and distant regions of the universe.",
+    engineering:
+      "Hubble combines precision optics, solar power, stabilization systems, and replaceable instruments.",
+    impact:
+      "Its observations improved scientific understanding of the age and expansion of the universe."
+  },
+
+  artemis1: {
+    title: "Artemis I",
+    objective: "Test the Orion spacecraft and Space Launch System around the Moon.",
+    engineering:
+      "The mission tested launch, navigation, heat-shield performance, communication, and deep-space operations.",
+    impact:
+      "It prepared NASA for future crewed lunar missions."
+  },
+
+  jwst: {
+    title: "James Webb Space Telescope",
+    objective: "Study the early universe, stars, galaxies, and planetary systems.",
+    engineering:
+      "JWST uses a segmented mirror, infrared instruments, and a large multilayer sunshield.",
+    impact:
+      "It allows scientists to observe extremely distant and faint objects."
+  },
+
+  perseverance: {
+    title: "Perseverance Rover",
+    objective: "Search for evidence of ancient microbial life and study Mars geology.",
+    engineering:
+      "The rover includes autonomous navigation, scientific instruments, cameras, and a sample-caching system.",
+    impact:
+      "It supports future Mars exploration and sample-return research."
+  }
+};
+
+function showMission(missionId) {
+  const mission = missionData[missionId];
+
+  document.getElementById("missionInfo").innerHTML = `
+    <h3>${mission.title}</h3>
+    <p><strong>Objective:</strong> ${mission.objective}</p>
+    <p><strong>Engineering:</strong> ${mission.engineering}</p>
+    <p><strong>Impact:</strong> ${mission.impact}</p>
+  `;
+
+  document.getElementById("mission-details").scrollIntoView({
+    behavior: "smooth"
+  });
+}
