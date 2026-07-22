@@ -464,3 +464,49 @@ document.addEventListener("DOMContentLoaded", function () {
     displayQuestion();
   }
 });
+
+const researchAreaData = {
+
+  aerodynamics: {
+    title: "Aerodynamics",
+    description: "Aerodynamics studies how air flows around aircraft and spacecraft.",
+    topics: "Lift, drag, thrust, weight, airflow, airfoils, and angle of attack.",
+    application: "Used to improve aircraft efficiency, speed, stability, and fuel economy."
+  },
+
+  propulsion: {
+    title: "Propulsion",
+    description: "Propulsion systems generate thrust to move aircraft and spacecraft.",
+    topics: "Jet engines, rocket engines, turbofans, fuel systems, and combustion.",
+    application: "Allows aircraft to fly and rockets to reach space."
+  },
+
+  materials: {
+    title: "Materials",
+    description: "Modern aerospace vehicles use lightweight but extremely strong materials.",
+    topics: "Carbon fiber, aluminum alloys, titanium, ceramics, and composites.",
+    application: "Reduces weight while increasing strength and heat resistance."
+  },
+
+  avionics: {
+    title: "Avionics",
+    description: "Avionics combines electronics used for navigation, communication, and flight control.",
+    topics: "GPS, radar, sensors, autopilot, flight computers, and displays.",
+    application: "Helps pilots and spacecraft operate safely and accurately."
+  },
+
+  spacesystems: {
+    title: "Space Systems",
+    description: "Space systems involve the engineering of satellites, spacecraft, and launch vehicles.",
+    topics: "Orbital mechanics, spacecraft design, communication, power systems, and guidance.",
+    application: "Supports exploration, communication, Earth observation, and scientific missions."
+  },
+
+  artificialintelligence: {
+    title: "Artificial Intelligence",
+    description: "Artificial intelligence allows aerospace systems to make intelligent decisions.",
+    topics: "Machine learning, autonomous drones, robotics, computer vision, and navigation.",
+    application: "Used in Mars rovers, autonomous aircraft, and future space exploration."
+  }
+
+};
