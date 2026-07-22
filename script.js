@@ -365,3 +365,102 @@ function showMission(missionId) {
     behavior: "smooth"
   });
 }
+
+const quizQuestions = [
+  {
+    question: "Which aircraft first broke the sound barrier?",
+    answers: ["Concorde", "Bell X-1", "Boeing 747", "SR-71"],
+    correct: 1
+  },
+  {
+    question: "Which mission first landed humans on the Moon?",
+    answers: ["Apollo 11", "Artemis I", "Voyager 1", "Gemini 4"],
+    correct: 0
+  },
+  {
+    question: "What force allows an aircraft to rise?",
+    answers: ["Drag", "Weight", "Lift", "Friction"],
+    correct: 2
+  },
+  {
+    question: "Which telescope mainly observes infrared light?",
+    answers: ["Hubble", "James Webb", "Voyager 1", "Apollo"],
+    correct: 1
+  },
+  {
+    question: "Which aircraft could fly faster than Mach 3?",
+    answers: ["Boeing 747", "Wright Flyer", "SR-71", "Airbus A380"],
+    correct: 2
+  }
+];
+
+let currentQuestionIndex = 0;
+let quizScore = 0;
+
+function displayQuestion() {
+  const questionData = quizQuestions[currentQuestionIndex];
+  const answerButtons = document.getElementById("answerButtons");
+
+  document.getElementById("question").textContent =
+    questionData.question;
+
+  document.getElementById("quizFeedback").textContent = "";
+  answerButtons.innerHTML = "";
+
+  questionData.answers.forEach(function (answer, index) {
+    const button = document.createElement("button");
+
+    button.textContent = answer;
+    button.onclick = function () {
+      checkAnswer(index);
+    };
+
+    answerButtons.appendChild(button);
+  });
+}
+
+function checkAnswer(selectedIndex) {
+  const questionData = quizQuestions[currentQuestionIndex];
+  const feedback = document.getElementById("quizFeedback");
+  const buttons = document.querySelectorAll(".answer-buttons button");
+
+  buttons.forEach(function (button) {
+    button.disabled = true;
+  });
+
+  if (selectedIndex === questionData.correct) {
+    feedback.textContent = "Correct!";
+    quizScore++;
+  } else {
+    feedback.textContent =
+      "Incorrect. The correct answer is " +
+      questionData.answers[questionData.correct] +
+      ".";
+  }
+}
+
+function nextQuestion() {
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < quizQuestions.length) {
+    displayQuestion();
+  } else {
+    document.querySelector(".quiz-card").innerHTML = `
+      <h2>Quiz Complete</h2>
+      <p>You scored ${quizScore} out of ${quizQuestions.length}.</p>
+      <button onclick="restartQuiz()">Try Again</button>
+    `;
+  }
+}
+
+function restartQuiz() {
+  currentQuestionIndex = 0;
+  quizScore = 0;
+  location.reload();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("question")) {
+    displayQuestion();
+  }
+});
