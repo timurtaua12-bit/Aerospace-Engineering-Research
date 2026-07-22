@@ -40,40 +40,57 @@
 
 <div class="grid">
 
-<div class="card">
-<h3>✈️ Aerodynamics</h3>
-<p>Study of airflow around aircraft, including lift and drag.</p>
+<div class="card research-card" onclick="showResearchArea('aerodynamics')">
+  <h3>✈️ Aerodynamics</h3>
+  <p>Studies how air moves around aircraft and how lift, drag, thrust, and weight affect flight.</p>
+  </p>
+  <button>Learn More</button>
 </div>
 
-<div class="card">
-<h3>🚀 Propulsion</h3>
-<p>Jet engines, rocket engines, thrust, and fuel systems.</p>
+<div class="card research-card" onclick="showResearchArea('propulsion')">
+  <h3>🚀 Propulsion</h3>
+  <p>Focuses on engines, rockets, fuel systems, and how vehicles generate power to move forward.</p>
+  </p>
+  <button>Learn More</button>
 </div>
 
-<div class="card">
-<h3>⚙️ Materials</h3>
-<p>Lightweight composites, aluminum alloys, titanium, and heat-resistant materials.</p>
+<div class="card research-card" onclick="showResearchArea('materials')">
+  <h3>⚙️ Materials</h3>
+  <p>Lightweight composites, aluminum alloys, titanium, and heat-resistant materials.</p>
+  </p>
+  <button>Learn More</button>
 </div>
 
-<div class="card">
-<h3>💻 Avionics</h3>
-<p>Navigation systems, flight computers, sensors, and communication technology.</p>
+<div class="card research-card" onclick="showResearchArea('avionics')">
+  <h3>💻 Avionics</h3>
+  <p>Navigation systems, flight computers, sensors, and communication technology.</p>
+  </p>
 </div>
 
-<div class="card">
-<h3>🛰 Space Systems</h3>
-<p>Satellite engineering, orbital mechanics, and spacecraft design.</p>
+<div class="card research-card" onclick="showResearchArea('spacesystems')">
+  <h3>🛰 Space Systems</h3>
+  <p>Satellite engineering, orbital mechanics, and spacecraft design.</p>
+  </p>
 </div>
 
-<div class="card">
-<h3>🤖 Artificial Intelligence</h3>
-<p>Autonomous drones, intelligent navigation, and future aerospace technology.</p>
+<div class="card research-card" onclick="showResearchArea('artificialintelligence')">
+  <h3>🤖 Artificial Intelligence</h3>
+  <p>Autonomous drones, intelligent navigation, and future aerospace technology.</p>
+  </p>
 </div>
 
 </div>
 
 </section>
 
+<section id="research-details">
+    <h2>Research Area Details</h2>
+    <div class="card" id="researchAreaInfo">
+        <h3>Select a research area</h3>
+        <p>Tap one of the cards above to explore the topic.</p>
+    </div>
+</section>
+    
 <footer>
 <p>© 2026 AeroResearch</p>
 </footer>
