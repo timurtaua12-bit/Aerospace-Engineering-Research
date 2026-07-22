@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aerospace Quiz | AeroResearch</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <h2>AeroResearch</h2>
+  <a href="index.html">Home</a>
+  <a href="aircraft.html">Aircraft</a>
+  <a href="spacecraft.html">Spacecraft</a>
+  <a href="missions.html">Missions</a>
+  <a href="engineering.html">Engineering</a>
+  <a href="quiz.html">Quiz</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="tagline">Learning Center</p>
+    <h1>Aerospace Knowledge Quiz</h1>
+    <p>Test what you know about aircraft, spacecraft, and engineering.</p>
+  </div>
+</header>
+
+<section>
+  <div class="quiz-card">
+    <h2 id="question">Question</h2>
+
+    <div id="answerButtons" class="answer-buttons"></div>
+
+    <p id="quizFeedback"></p>
+
+    <button id="nextQuestionButton" onclick="nextQuestion()">
+      Next Question
+    </button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
