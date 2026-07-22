@@ -510,3 +510,23 @@ const researchAreaData = {
   }
 
 };
+
+function showResearchArea(areaId) {
+
+    const area = researchAreaData[areaId];
+
+    document.getElementById("researchAreaInfo").innerHTML = `
+        <h3>${area.title}</h3>
+
+        <p><strong>Overview:</strong><br>${area.description}</p>
+
+        <p><strong>Main Topics:</strong><br>${area.topics}</p>
+
+        <p><strong>Engineering Applications:</strong><br>${area.application}</p>
+    `;
+
+    document.getElementById("research-details").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
