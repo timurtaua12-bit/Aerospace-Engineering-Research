@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aerospace Locations | AeroResearch</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="tagline">Global Aerospace Explorer</p>
+
+    <h1>Major Aerospace Locations</h1>
+
+    <p>
+      Explore important space centers, research facilities, manufacturers,
+      and launch sites around the world.
+    </p>
+  </div>
+</header>
+
+<section>
+  <h2>Explore Aerospace Centers</h2>
+
+  <div class="location-grid">
+
+    <button
+      class="location-card"
+      onclick="showLocation('kennedy')"
+    >
+      <h3>🚀 Kennedy Space Center</h3>
+      <p>Florida, United States</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('johnson')"
+    >
+      <h3>🧑‍🚀 Johnson Space Center</h3>
+      <p>Texas, United States</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('starbase')"
+    >
+      <h3>🚀 Starbase</h3>
+      <p>Texas, United States</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('toulouse')"
+    >
+      <h3>✈️ Airbus Toulouse</h3>
+      <p>Toulouse, France</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('esa')"
+    >
+      <h3>🛰️ European Space Agency</h3>
+      <p>Noordwijk, Netherlands</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('jaxa')"
+    >
+      <h3>🌌 JAXA Tsukuba Space Center</h3>
+      <p>Tsukuba, Japan</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('isro')"
+    >
+      <h3>🛰️ ISRO Space Center</h3>
+      <p>Bengaluru, India</p>
+    </button>
+
+    <button
+      class="location-card"
+      onclick="showLocation('skunkworks')"
+    >
+      <h3>✈️ Skunk Works</h3>
+      <p>California, United States</p>
+    </button>
+
+  </div>
+</section>
+
+<section id="location-details">
+  <h2>Location Details</h2>
+
+  <div class="card" id="locationInfo">
+    <h3>Select a location</h3>
+
+    <p>
+      Tap one of the aerospace locations above to learn about its work,
+      missions, and engineering importance.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© 2026 AeroResearch</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
