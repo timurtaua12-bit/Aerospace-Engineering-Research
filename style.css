@@ -856,3 +856,11 @@ section {
     background: #33d1ff;
     transform: translateY(-2px);
 }
+
+.research-fact {
+  margin-top: 22px;
+  padding: 18px;
+  background: rgba(0, 194, 255, 0.1);
+  border-left: 4px solid #00c2ff;
+  border-radius: 8px;
+}
