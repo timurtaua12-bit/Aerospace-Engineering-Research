@@ -483,50 +483,85 @@ const researchAreaData = {
 
   materials: {
     title: "Materials",
-    description: "Modern aerospace vehicles use lightweight but extremely strong materials.",
-    topics: "Carbon fiber, aluminum alloys, titanium, ceramics, and composites.",
-    application: "Reduces weight while increasing strength and heat resistance."
+    description:
+      "Materials engineering focuses on developing lightweight, durable, and heat-resistant materials for aircraft and spacecraft.",
+    topics:
+      "Carbon fiber composites, aluminum alloys, titanium, ceramics, heat-resistant materials, and structural testing.",
+    application:
+      "Advanced materials reduce vehicle weight, improve fuel efficiency, increase strength, and protect spacecraft during extreme temperatures.",
+    examples:
+      "Boeing 787 carbon-fiber fuselage, Space Shuttle heat-resistant tiles, and titanium components in high-speed aircraft."
   },
 
   avionics: {
     title: "Avionics",
-    description: "Avionics combines electronics used for navigation, communication, and flight control.",
-    topics: "GPS, radar, sensors, autopilot, flight computers, and displays.",
-    application: "Helps pilots and spacecraft operate safely and accurately."
-  },
+    description:
+      "Avionics combines the electronic systems used to control, navigate, and communicate in aircraft and spacecraft.",
+    topics:
+      "Flight computers, GPS, radar, navigation systems, communication equipment, sensors, autopilot, and cockpit displays.",
+    application:
+      "Avionics improves flight safety, navigation accuracy, communication, and automation for both pilots and spacecraft.",
+    examples:
+      "Garmin G1000 flight displays, Airbus fly-by-wire systems, and spacecraft guidance computers."
+  }, 
 
   spacesystems: {
     title: "Space Systems",
-    description: "Space systems involve the engineering of satellites, spacecraft, and launch vehicles.",
-    topics: "Orbital mechanics, spacecraft design, communication, power systems, and guidance.",
-    application: "Supports exploration, communication, Earth observation, and scientific missions."
+    description:
+      "Space systems engineering focuses on designing satellites, spacecraft, launch vehicles, and orbital missions.",
+    topics:
+      "Orbital mechanics, spacecraft design, guidance systems, solar panels, communication systems, propulsion, and mission planning.",
+    application:
+      "Space systems make satellite communication, Earth observation, GPS navigation, scientific research, and deep-space exploration possible.",
+    examples:
+      "International Space Station, Hubble Space Telescope, GPS satellites, and James Webb Space Telescope."
   },
 
   artificialintelligence: {
     title: "Artificial Intelligence",
-    description: "Artificial intelligence allows aerospace systems to make intelligent decisions.",
-    topics: "Machine learning, autonomous drones, robotics, computer vision, and navigation.",
-    application: "Used in Mars rovers, autonomous aircraft, and future space exploration."
+    description:
+      "Artificial intelligence enables aerospace systems to make decisions, analyze information, and operate with limited human control.",
+    topics:
+      "Machine learning, autonomous drones, robotics, computer vision, image recognition, navigation, and data analysis.",
+    application:
+      "AI is used in autonomous aircraft, Mars rovers, spacecraft navigation, predictive maintenance, and future intelligent aerospace systems.",
+    examples:
+      "Perseverance Rover autonomous navigation, intelligent drones, and the X-62A VISTA research aircraft."
   }
 
+const researchAreaData = {
+  // all six research areas here
 };
 
 function showResearchArea(areaId) {
+  const area = researchAreaData[areaId];
 
-    const area = researchAreaData[areaId];
+  document.getElementById("researchAreaInfo").innerHTML = `
+    <h3>${area.title}</h3>
 
-    document.getElementById("researchAreaInfo").innerHTML = `
-        <h3>${area.title}</h3>
+    <p>
+      <strong>Overview:</strong><br>
+      ${area.description}
+    </p>
 
-        <p><strong>Overview:</strong><br>${area.description}</p>
+    <p>
+      <strong>Main Topics:</strong><br>
+      ${area.topics}
+    </p>
 
-        <p><strong>Main Topics:</strong><br>${area.topics}</p>
+    <p>
+      <strong>Engineering Applications:</strong><br>
+      ${area.application}
+    </p>
 
-        <p><strong>Engineering Applications:</strong><br>${area.application}</p>
-    `;
+    <p>
+      <strong>Real-World Examples:</strong><br>
+      ${area.examples}
+    </p>
+  `;
 
-    document.getElementById("research-details").scrollIntoView({
-        behavior: "smooth"
-    });
-
+  document.getElementById("research-details").scrollIntoView({
+    behavior: "smooth"
+  });
 }
+
