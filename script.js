@@ -472,7 +472,7 @@ const researchAreaData = {
     description: "Aerodynamics studies how air flows around aircraft and spacecraft.",
     topics: "Lift, drag, thrust, weight, airflow, airfoils, and angle of attack.",
     application: "Used to improve aircraft efficiency, speed, stability, and fuel economy.",
-    fact: "The SR-71 Blackbird generated lift from both its wings and its specially shaped fuselage.",
+    fact: "The SR-71 Blackbird generated lift from both its wings and its specially shaped fuselage."
   },
 
   propulsion: {
@@ -480,7 +480,7 @@ const researchAreaData = {
     description: "Propulsion systems generate thrust to move aircraft and spacecraft.",
     topics: "Jet engines, rocket engines, turbofans, fuel systems, and combustion.",
     application: "Allows aircraft to fly and rockets to reach space.",
-    fact: "The Saturn V rocket produced about 7.5 million pounds of thrust at liftoff.",
+    fact: "The Saturn V rocket produced about 7.5 million pounds of thrust at liftoff."
   },
 
   materials: {
@@ -494,7 +494,7 @@ const researchAreaData = {
     examples:
       "Boeing 787 carbon-fiber fuselage, Space Shuttle heat-resistant tiles, and titanium components in high-speed aircraft.",
     fact:
-      "Composite materials can be lighter than metal while still providing high strength.",
+      "Composite materials can be lighter than metal while still providing high strength."
   },
 
   avionics: {
@@ -508,7 +508,7 @@ const researchAreaData = {
     examples:
       "Garmin G1000 flight displays, Airbus fly-by-wire systems, and spacecraft guidance computers.",
     fact:
-      "Modern glass cockpits replace many traditional gauges with digital flight displays.",
+      "Modern glass cockpits replace many traditional gauges with digital flight displays."
   }, 
 
   spacesystems: {
@@ -522,7 +522,7 @@ const researchAreaData = {
     examples:
       "International Space Station, Hubble Space Telescope, GPS satellites, and James Webb Space Telescope.",
     fact:
-      "Satellites must balance speed and gravity to remain in orbit around Earth.",
+      "Satellites must balance speed and gravity to remain in orbit around Earth."
   },
 
   artificialintelligence: {
@@ -536,7 +536,7 @@ const researchAreaData = {
     examples:
       "Perseverance Rover autonomous navigation, intelligent drones, and the X-62A VISTA research aircraft.",
     fact:
-      "Mars rovers use autonomous navigation because commands from Earth take too long to arrive instantly.",
+      "Mars rovers use autonomous navigation because commands from Earth take too long to arrive instantly."
   }
 
 const researchAreaData = {
