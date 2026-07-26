@@ -839,3 +839,20 @@ section {
   font-size: 18px;
   font-weight: bold;
 }
+
+.learn-more-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00c2ff;
+    color: #061826;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+    background: #33d1ff;
+    transform: translateY(-2px);
+}
