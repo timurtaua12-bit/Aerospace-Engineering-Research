@@ -538,9 +538,6 @@ const researchAreaData = {
     fact:
       "Mars rovers use autonomous navigation because commands from Earth take too long to arrive instantly."
   }
-
-const researchAreaData = {
-  // all six research areas here
 };
 
 function showResearchArea(areaId) {
