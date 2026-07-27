@@ -582,3 +582,98 @@ function showResearchArea(areaId) {
     behavior: "smooth"
   });
 }
+
+const locationData = {
+  kennedy: {
+    title: "Kennedy Space Center",
+    location: "Florida, United States",
+    purpose:
+      "A major launch center used for human spaceflight, satellite launches, and deep-space missions.",
+    importance:
+      "Kennedy supported Apollo missions, Space Shuttle launches, and modern Artemis operations."
+  },
+
+  johnson: {
+    title: "Johnson Space Center",
+    location: "Texas, United States",
+    purpose:
+      "A center for astronaut training, mission control, spacecraft operations, and human spaceflight research.",
+    importance:
+      "It is closely associated with Mission Control and long-duration human spaceflight."
+  },
+
+  starbase: {
+    title: "Starbase",
+    location: "Texas, United States",
+    purpose:
+      "A development and launch facility used for testing large reusable spacecraft systems.",
+    importance:
+      "It supports research into reusable launch vehicles and future deep-space transportation."
+  },
+
+  toulouse: {
+    title: "Airbus Toulouse",
+    location: "Toulouse, France",
+    purpose:
+      "A major center for aircraft design, engineering, manufacturing, and final assembly.",
+    importance:
+      "It is associated with aircraft such as the Airbus A320, A350, and A380."
+  },
+
+  esa: {
+    title: "European Space Agency",
+    location: "Noordwijk, Netherlands",
+    purpose:
+      "A major European center for space research, spacecraft testing, and mission development.",
+    importance:
+      "It supports scientific missions, Earth observation, navigation, and international cooperation."
+  },
+
+  jaxa: {
+    title: "JAXA Tsukuba Space Center",
+    location: "Tsukuba, Japan",
+    purpose:
+      "A center for spacecraft development, astronaut training, satellite operations, and space research.",
+    importance:
+      "It supports Japanese human spaceflight, robotics, satellites, and scientific missions."
+  },
+
+  isro: {
+    title: "ISRO Space Center",
+    location: "Bengaluru, India",
+    purpose:
+      "A major center for spacecraft engineering, satellite development, and mission planning.",
+    importance:
+      "ISRO is known for satellite programs, lunar missions, Mars exploration, and launch systems."
+  },
+
+  skunkworks: {
+    title: "Skunk Works",
+    location: "California, United States",
+    purpose:
+      "An advanced aerospace development organization focused on experimental aircraft and defense technology.",
+    importance:
+      "It developed famous aircraft including the U-2 and SR-71 Blackbird."
+  }
+};
+
+function showLocation(locationId) {
+  const location = locationData[locationId];
+  const informationBox = document.getElementById("locationInfo");
+  const detailsSection = document.getElementById("location-details");
+
+  if (!location || !informationBox || !detailsSection) {
+    return;
+  }
+
+  informationBox.innerHTML = `
+    <h3>${location.title}</h3>
+    <p><strong>Location:</strong> ${location.location}</p>
+    <p><strong>Main Work:</strong> ${location.purpose}</p>
+    <p><strong>Engineering Importance:</strong> ${location.importance}</p>
+  `;
+
+  detailsSection.scrollIntoView({
+    behavior: "smooth"
+  });
+}
